@@ -1,0 +1,10 @@
+.targetContainer{
+    /* z-index: 2; */
+    background-color: white;
+    position: absolute;
+    top:0;
+    min-width: auto;
+    width: 20vw;
+    border-radius: 0px 0px 10px 0px ;
+    border: 1px solid black;
+}
