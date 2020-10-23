@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
+import Swal from "sweetalert2";
 import "../styles/Distance.css";
-export default function Distance({ chosenLocation, currentLocation }) {
-    const [distance, setDistance] = useState();
-
+export default function Distance({ chosenLocation, currentLocation, distance, setDistance }) {
     function haversine_distance(mk1, mk2) {
-        debugger
         var R = 3958.8; // Radius of the Earth in miles
         var rlat1 = mk1.lat * (Math.PI / 180); // Convert degrees to radians
         var rlat2 = mk2.location.lat * (Math.PI / 180); // Convert degrees to radians
@@ -25,7 +23,15 @@ export default function Distance({ chosenLocation, currentLocation }) {
             );
         return Math.round(d);
     }
-
+    useEffect(() => {
+        if (distance < 16) {
+            Swal.fire({
+                icon: "success",
+                title: "כל הכבוד !",
+                text: `קמ ${distance} המרחק בין המיקומים הינו `,
+            });
+        }
+    }, [distance]);
     useEffect(() => {
         if (!!Object.keys(chosenLocation).length && !!Object.keys(currentLocation).length) {
             setDistance(haversine_distance(chosenLocation, currentLocation));
@@ -33,7 +39,18 @@ export default function Distance({ chosenLocation, currentLocation }) {
     }, [chosenLocation, currentLocation]);
     return (
         <>
-            <div className="distanceContainer">The distance is {distance}</div>
+            <div
+                style={
+                    distance < 16
+                        ? { backgroundColor: "green" }
+                        : distance
+                        ? { backgroundColor: "red" }
+                        : {}
+                }
+                className="distanceContainer"
+            >
+                The distance is {distance}
+            </div>
         </>
     );
 }

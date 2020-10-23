@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import MapField from "./components/MapField";
-import GameGui from "./components/GameGui";
+import CheckboxesGui from "./components/CheckboxesGui";
 import NewTargetGui from "./components/NewTargetGui";
 import Distance from "./components/Distance";
 import objPlaces from "./objectives.json";
 
 function App() {
     const [places, setPlaces] = useState(objPlaces);
-    const [currentLocation, setCurrentLocation] = useState({});
+    const [currentLocation, setCurrentLocation] = useState();
     const [chosenLocation, setChosenLocation] = useState({});
+    const [distance, setDistance] = useState();
+    const [darkMode, setDarkMode] = useState(true);
 
-    useEffect(() => {
-        const random = Math.floor(Math.random() * (1035 - 1) + 1);
-        setCurrentLocation(places[random]);
-    }, []);
     return (
         <>
             <MapField
@@ -23,13 +21,27 @@ function App() {
                 chosenLocation={chosenLocation}
                 setChosenLocation={setChosenLocation}
                 currentLocation={currentLocation}
+                darkMode={darkMode}
             />
-            <GameGui places={places} setPlaces={setPlaces} />
+            <CheckboxesGui
+                places={places}
+                setPlaces={setPlaces}
+                darkMode={darkMode}
+                setDarkMode={setDarkMode}
+            />
             <NewTargetGui
+                places={places}
                 currentLocation={currentLocation}
                 setCurrentLocation={setCurrentLocation}
+                setChosenLocation={setChosenLocation}
+                setDistance={setDistance}
             />
-            <Distance chosenLocation={chosenLocation} currentLocation={currentLocation} />
+            <Distance
+                chosenLocation={chosenLocation}
+                currentLocation={currentLocation}
+                distance={distance}
+                setDistance={setDistance}
+            />
         </>
     );
 }
