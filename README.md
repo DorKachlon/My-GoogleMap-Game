@@ -19,7 +19,8 @@ Your goal is to stab the point on the map of Israel when the air distance betwee
 
 ```
 To play this game locally, you must first give a star for this repository :).
-clone this app, and add a file named "apiKey.js" to the `src` folder. in this file, add your key to GoogleMaps and export like this:
+clone this app, and add a file named "apiKey.js" to the `src` folder. in this file, 
+add your key to GoogleMaps and export like this:
 ```
 
 ```javascript
