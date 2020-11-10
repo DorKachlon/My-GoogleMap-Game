@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My GoogleMap Game
 
-## Available Scripts
+## Info
 
-In the project directory, you can run:
+`Type` - Front-end
 
-### `npm start`
+`Framework` - React.js
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Central Libraries :
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- Material-UI
+- Google-Maps-React
+- Sweetalert2
 
-### `npm test`
+This app is a game of Knowledge of the Israel Land.
+There is a `citiesFile.JSON` file with 1000 different places in the country of different types and their names.
+You can choose with which type of position you want to play.
+Your goal is to stab the point on the map of Israel when the air distance between the point you stabbed and the correct location is 15 km maximum.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+To play this game locally, you must first give a star for this repository :).
+clone this app, and add a file named "apiKey.js" to the `src` folder. in this file, add your key to GoogleMaps and export like this:
+```
 
-### `npm run build`
+```javascript
+const API_KEY = "AIzaSyBEVf342339DE1fC8325543434fkArws4k2323424UIknJk";
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+export default API_KEY;
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Simulation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![gif from shareX](GIF.gif)

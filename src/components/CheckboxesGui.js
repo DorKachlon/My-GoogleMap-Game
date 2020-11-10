@@ -3,7 +3,7 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import FormGroup from "@material-ui/core/FormGroup";
 import "../styles/CheckboxesGui.css";
-import objPlaces from "../objectives.json";
+import objPlaces from "../citiesFile.json";
 import IconButton from "@material-ui/core/IconButton";
 import Brightness5Icon from "@material-ui/icons/Brightness5";
 import Brightness7Icon from "@material-ui/icons/Brightness7";

@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
+import React, { useState} from "react";
 import MapField from "./components/MapField";
 import CheckboxesGui from "./components/CheckboxesGui";
 import NewTargetGui from "./components/NewTargetGui";
 import Distance from "./components/Distance";
-import objPlaces from "./objectives.json";
+import objPlaces from "./citiesFile.json";
 
 function App() {
     const [places, setPlaces] = useState(objPlaces);

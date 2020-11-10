@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Map, GoogleApiWrapper, InfoWindow, Marker, Circle } from "google-maps-react";
 import mapStyles from "../mapStyle.js";
 import mapStylesLite from "../mapStyleLite.js";
-import API_KEY from "../apiKet";
+import API_KEY from "../apiKey";
 function MapField({ google, currentLocation, chosenLocation, setChosenLocation, darkMode }) {
     const [showCorrectLocation, setShowCorrectLocation] = useState(false);
     const defaultCenterTLV = {
